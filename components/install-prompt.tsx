@@ -124,11 +124,11 @@ export function InstallPrompt() {
               </li>
               <li className="flex items-center">
                 <span className="mr-2">2.</span>
-                <span>Scroll down and tap "Add to Home Screen"</span>
+                <span>Scroll down and tap Add to Home Screen</span>
               </li>
               <li className="flex items-center">
                 <span className="mr-2">3.</span>
-                <span>Tap "Add" in the top right corner</span>
+                <span>Tap Add in the top right corner</span>
               </li>
             </ol>
           </div>
