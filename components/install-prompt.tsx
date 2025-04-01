@@ -41,6 +41,7 @@ export function InstallPrompt() {
 
     const isInStandalone = checkStandalone();
     const isOnIOS = checkIOS();
+    console.log(isOnIOS);
 
     if (!isInStandalone) {
       // Listen for the beforeinstallprompt event
