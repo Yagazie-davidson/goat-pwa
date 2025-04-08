@@ -1,6 +1,12 @@
 import type { Metadata } from "next";
 import "./globals.css";
-
+// import { Ojuju } from "next/font/google";
+import { Toaster } from "@/components/ui/sonner";
+import { myFont } from "./fonts";
+// const ojuju = Ojuju({
+//   subsets: ["latin"],
+//   display: "swap",
+// });
 export const metadata: Metadata = {
   title: "Goat",
   description: "Goat",
@@ -35,7 +41,12 @@ export default function RootLayout({
       <head>
         <link rel="/manifest.ts"></link>
       </head>
-      <body className={`antialiased`}>{children}</body>
+      <body
+        className={`antialiased ${myFont.className} bg-[#121212] text-[#FDFDFD]`}
+      >
+        <Toaster />
+        {children}
+      </body>
     </html>
   );
 }

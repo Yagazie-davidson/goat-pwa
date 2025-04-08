@@ -1,22 +1,19 @@
-import { NotificationSubscriber } from "@/components/notification-subscriber";
-import { InstallPrompt } from "@/components/install-prompt";
+import { createClient } from "@/lib/supabase/server";
+import { redirect } from "next/navigation";
 
-export default function Home() {
+export default async function Home() {
+  const supabase = await createClient();
+
+  const {
+    data: { user },
+  } = await supabase.auth.getUser();
+
+  if (!user) {
+    return redirect("/auth/signin");
+  }
+  redirect(`/${user?.id}`);
+
   return (
-    <main className="flex min-h-screen flex-col items-center justify-center p-4 md:p-24">
-      <div className="max-w-md w-full space-y-8">
-        <div className="text-center">
-          <h1 className="text-4xl font-bold tracking-tight">Goat APP</h1>
-          <p className="mt-3 text-lg text-muted-foreground">
-            A Progressive Web App with push notifications
-          </p>
-        </div>
-
-        <div className="mt-10 space-y-6">
-          <NotificationSubscriber />
-          <InstallPrompt />
-        </div>
-      </div>
-    </main>
+    <main className="flex min-h-screen flex-col items-center justify-center p-4 md:p-24"></main>
   );
 }
