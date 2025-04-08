@@ -2,7 +2,6 @@
 
 import { useState, useRef, useEffect } from "react";
 import { Check, ChevronsUpDown, X } from "lucide-react";
-import Image from "next/image";
 
 export type Housemate = {
   id: string;

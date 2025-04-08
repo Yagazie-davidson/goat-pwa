@@ -4,7 +4,7 @@ import { Input as InputBox } from "./ui/input";
 import { cn } from "@/lib/utils";
 
 type Props = ComponentProps<typeof InputBox> & {};
-const Input = ({ className, id, name, type, placeholder, ...props }: Props) => {
+const Input = ({ className, id, name, type, placeholder }: Props) => {
   return (
     <motion.input
       whileFocus={{ scaleX: 1.01 }}

@@ -84,10 +84,7 @@ export const NewBillForm = ({
         placeholder="Tag housemates"
       />
       <div className="flex justify-center w-full">
-        <SubmitButton
-          pendingText="Issuing Bill..."
-          className="bg-[#3F1A69] text-white w-full flex justify-center px-10 rounded-sm font-bold py-3 text-lg"
-        >
+        <SubmitButton className="bg-[#3F1A69] text-white w-full flex justify-center px-10 rounded-sm font-bold py-3 text-lg">
           Issue Bill
         </SubmitButton>
       </div>

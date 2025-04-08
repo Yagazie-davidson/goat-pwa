@@ -1,16 +1,4 @@
 import { createClient } from "@/lib/supabase/server";
-import { redirect } from "next/navigation";
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
-import {
-  ArrowUp,
-  BadgeAlert,
-  Bell,
-  Logs,
-  ReceiptIcon,
-  SquareKanban,
-} from "lucide-react";
-import Link from "next/link";
-import { Skeleton } from "@/components/ui/skeleton";
 import RecentBills from "../RecentBills";
 import BackButton from "@/components/BackButton";
 

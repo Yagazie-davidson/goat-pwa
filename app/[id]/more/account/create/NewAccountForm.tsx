@@ -1,6 +1,6 @@
 "use client";
 import { SubmitButton } from "@/components/SubmitButton";
-import React, { useEffect, useRef, useState } from "react";
+import React, { useEffect, useRef } from "react";
 import Input from "@/components/Input";
 import { updateAccountInfo } from "@/app/actions";
 import { useFormState } from "react-dom";
@@ -73,10 +73,7 @@ export const NewAccountForm = ({ user_id }: { user_id: string }) => {
       </div>
 
       <div className="flex justify-center w-full mt-20">
-        <SubmitButton
-          pendingText="Issuing Bill..."
-          className="bg-[#3F1A69] text-white w-full flex justify-center px-10 rounded-sm font-bold py-3 text-lg"
-        >
+        <SubmitButton className="bg-[#3F1A69] text-white w-full flex justify-center px-10 rounded-sm font-bold py-3 text-lg">
           Update Account Info
         </SubmitButton>
       </div>

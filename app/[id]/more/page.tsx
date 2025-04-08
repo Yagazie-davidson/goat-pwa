@@ -1,6 +1,6 @@
 import BackButton from "@/components/BackButton";
 import SignoutButton from "@/components/SignoutButton";
-import { ChevronRight, Power } from "lucide-react";
+import { ChevronRight } from "lucide-react";
 import Link from "next/link";
 import React from "react";
 

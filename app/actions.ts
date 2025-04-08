@@ -3,7 +3,6 @@ import { User } from "@/components/user-tag-input";
 import { createClient } from "@/lib/supabase/server";
 import { encodedRedirect } from "@/lib/utils";
 import { revalidatePath } from "next/cache";
-import { ParamValue } from "next/dist/server/request/params";
 import { headers } from "next/headers";
 import { redirect } from "next/navigation";
 
@@ -130,7 +129,7 @@ export const createNewBill = async (prevState: any, formData: FormData) => {
     const bill_name = formData.get("bill_name")?.toString();
     const total_amount = formData.get("total_amount");
     const issuer_id = formData.get("issuer_id");
-    // @ts-ignore
+    // @ts-expect-error some error
     const tagged = JSON.parse(formData.get("tagged"));
     console.log({
       bill_name,
@@ -164,7 +163,7 @@ export const createNewBill = async (prevState: any, formData: FormData) => {
         bill_name: bill_name,
         housemate_id: tag.auth_id,
         issuer_id: issuer_id,
-        // @ts-ignore
+        // @ts-expect-error some error
         amount: total_amount / (tagged.length + 1),
       }));
       const { error: taggedError } = await supabase.from("tags").insert(tags);
@@ -176,9 +175,9 @@ export const createNewBill = async (prevState: any, formData: FormData) => {
           .from("users")
           .select("*")
           .eq("auth_id", auth_id.toString());
-        // @ts-ignore
+        // @ts-expect-error some error
         const currentOwe = userData[0]?.amount_owe;
-        // @ts-ignore
+        // @ts-expect-error some error
         const newOwe = currentOwe + total_amount / (tagged.length + 1);
         const { error: updateError } = await supabase
           .from("users")

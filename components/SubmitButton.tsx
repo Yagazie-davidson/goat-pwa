@@ -2,25 +2,18 @@
 
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
-import { Loader, Loader2 } from "lucide-react";
+import { Loader2 } from "lucide-react";
 import { type ComponentProps } from "react";
 import { useFormStatus } from "react-dom";
 import { motion } from "motion/react";
 
-type Props = ComponentProps<typeof Button> & {
-  pendingText?: string;
-};
+type Props = ComponentProps<typeof Button> & {};
 
-export function SubmitButton({
-  children,
-  pendingText = "Submitting...",
-  className,
-  ...props
-}: Props) {
+export function SubmitButton({ children, className, ...props }: Props) {
   const { pending } = useFormStatus();
 
   return (
-    // @ts-ignore
+    // @ts-expect-error error
     <motion.button
       whileHover={{ scale: 1.06 }}
       whileTap={{ scale: 0.95 }}

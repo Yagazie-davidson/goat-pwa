@@ -1,11 +1,11 @@
 import BackButton from "@/components/BackButton";
 import React from "react";
-import { createClient } from "@/lib/supabase/server";
+// import { createClient } from "@/lib/supabase/server";
 import { NewAccountForm } from "./NewAccountForm";
 
 const page = async ({ params }: { params: Promise<{ id: string }> }) => {
   const { id } = await params;
-  const supabase = await createClient();
+  // const supabase = await createClient();
   //   const { data: userData } = await supabase
   //     .from("users")
   //     .select("*")

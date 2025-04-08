@@ -41,7 +41,6 @@ const page = () => {
         <div className="absolute bottom-10">
           <div className=" flex justify-center w-full">
             <SubmitButton
-              pendingText="Signing In..."
               formAction={signInAction}
               className="bg-[#3F1A69] text-white w-full flex justify-center px-10 rounded-sm font-bold py-3 text-lg"
             >

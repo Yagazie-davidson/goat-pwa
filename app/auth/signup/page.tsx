@@ -1,20 +1,9 @@
 "use client";
-
-import { Button } from "@/components/ui/button";
-import { useActionState } from "react";
-import { motion } from "motion/react";
 import { signUpAction } from "@/app/actions";
 import Input from "@/components/Input";
 import { SubmitButton } from "@/components/SubmitButton";
 
-const initialState = {
-  message: "",
-};
 const page = () => {
-  //  const [state, formAction, pending] = useActionState(
-  // //    createUser,
-  //    initialState
-  //  );
   return (
     <div className=" flex h-screen flex-col items-center relative p-4 md:p-24 justify-center  bg-[#FEF5E5] text-[#161B26]">
       <div className="max-w-md w-full">
@@ -72,7 +61,6 @@ const page = () => {
           <div className="absolute bottom-10">
             <div className=" flex justify-center w-full">
               <SubmitButton
-                pendingText="Signing In..."
                 formAction={signUpAction}
                 className="bg-[#3F1A69] text-white w-full flex justify-center px-10 rounded-sm font-bold py-3 text-lg"
               >

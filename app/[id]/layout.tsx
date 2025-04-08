@@ -2,13 +2,9 @@ import Navbar from "@/components/navbar";
 // import "./globals.css";
 import { createClient } from "@/lib/supabase/server";
 import { redirect } from "next/navigation";
-import { Ojuju } from "next/font/google";
 import { myFont } from "../fonts";
 import { Toaster } from "@/components/ui/sonner";
-const ojuju = Ojuju({
-  subsets: ["latin"],
-  display: "swap",
-});
+
 export default async function RootLayout({
   children,
   params,

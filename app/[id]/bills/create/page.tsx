@@ -13,10 +13,12 @@ const page = async ({ params }: { params: Promise<{ id: string }> }) => {
   const { data: houseData } = await supabase
     .from("users")
     .select("*")
-    // @ts-ignore
+    // @ts-expect-error something about fetching
     .eq("house_id", userData[0].house_id)
     .neq("auth_id", id.toString());
-  userData && console.log(userData[0].auth_id);
+  if (userData) {
+    console.log(userData[0].auth_id);
+  }
   return (
     <main className="flex min-h-screen flex-col relative items-center justify-start px-3 py-6 md:p-24 bg-[#121212] text-[#FDFDFD]">
       <div className="max-w-md w-full h-full space-y-8">
