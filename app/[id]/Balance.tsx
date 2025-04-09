@@ -27,7 +27,7 @@ const Balance = ({ amount_owe }: Props) => {
           <div className="text-left">
             <p className="text-sm font-semibold text-muted-foreground mb-5">
               {amount_owe > 0
-                ? "You no go owe ke?"
+                ? "You no go owe ke? 💰"
                 : "Hmm... You're not owing, Strange 👀"}
             </p>
             <h4 className="text-4xl font-bold tracking-tight">
