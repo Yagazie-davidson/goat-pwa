@@ -7,7 +7,7 @@ import Link from "next/link";
 
 const page = () => {
   return (
-    <form className=" flex h-screen flex-col items-center relative p-4 md:p-24 justify-center  bg-[#FEF5E5] text-[#161B26]">
+    <form className=" flex h-screen flex-col items-center relative p-4 md:p-24 justify-center">
       <div className="max-w-md w-full">
         <h2 className="text-left text-2xl font-black mb-5">WELCOME BACK</h2>
         <div className="flex flex-col space-y-6">

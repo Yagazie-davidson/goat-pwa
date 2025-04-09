@@ -5,7 +5,7 @@ import { SubmitButton } from "@/components/SubmitButton";
 
 const page = () => {
   return (
-    <div className=" flex h-screen flex-col items-center relative p-4 md:p-24 justify-center  bg-[#FEF5E5] text-[#161B26]">
+    <div className=" flex h-screen flex-col items-center relative p-4 md:p-24 justify-center ">
       <div className="max-w-md w-full">
         <h2 className="text-left text-2xl font-black mb-5">
           WELCOME, Create account

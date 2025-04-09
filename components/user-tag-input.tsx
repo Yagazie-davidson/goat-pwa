@@ -129,7 +129,7 @@ export function UserTagInput({
             className="p-3  py-6 text-base border-2 border-[#FDFDFD] w-full flex justify-between focus:border-[#FDFDFD] focus:outline-0 focus:ring-0  placeholder:text-[#161B26] rounded-sm font-bold"
           >
             {selectedUsers.length > 0
-              ? `${selectedUsers.length} housemate${
+              ? `${selectedUsers.length} Housemate${
                   selectedUsers.length > 1 ? "s" : ""
                 } selected`
               : placeholder}
